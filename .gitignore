@@ -19,3 +19,9 @@ output/*.json
 .DS_Store
 .vscode/
 *.log
+
+# Cache de OSMnx (consultas a OpenStreetMap)
+cache/
+
+# Otros archivos generados dentro de data/
+data/*.csv
