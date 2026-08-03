@@ -1,0 +1,38 @@
+# ============================================================
+# Configuración central del Simulador de Tráfico Vehicular
+# TEL420 - Sistemas Paralelos
+# ============================================================
+
+# --- Zona de estudio (Yacuiba, Bolivia) ---
+# "place_query" se usa con osmnx.graph_from_place().
+# Si esa consulta no delimita bien la zona real (Plaza - Mercado - Terminal),
+# se usa el bounding box de respaldo (bbox) con graph_from_bbox().
+zona:
+  place_query: "Yacuiba, Gran Chaco, Tarija, Bolivia"
+  # Bounding box de respaldo: north, south, east, west (grados decimales)
+  # Cubre aproximadamente el triángulo Plaza Principal - Mercado Central - Terminal de Buses
+  bbox:
+    north: -22.006
+    south: -22.020
+    east: -63.670
+    west: -63.685
+  red_vial: "drive"   # tipo de red OSM: drive, walk, bike, all
+
+# --- Parámetros de simulación (RF12) ---
+simulacion:
+  num_vehiculos: 500
+  duracion_ticks: 1000
+  modo_ejecucion: "secuencial"   # secuencial | cpu_paralelo | gpu
+  velocidad_reproduccion: 1       # 1x, 2x, 4x (RF10)
+  semilla_aleatoria: 42           # reproducibilidad (RNF07, HU16)
+
+# --- Parámetros del vehículo/agente ---
+vehiculo:
+  velocidad_max_kmh: 40
+  velocidad_min_kmh: 5
+  distancia_seguridad_m: 8
+
+# --- Rutas de datos ---
+rutas:
+  grafo_calles: "data/yacuiba_zona.graphml"
+  resultados: "output/"

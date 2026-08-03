@@ -1,0 +1,18 @@
+services:
+  simulador:
+    build: .
+    container_name: simulador_trafico_yacuiba
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+      - ./config.yaml:/app/config.yaml
+    # GPU (Sprint 3): descomentar cuando se implemente CUDA y se tenga
+    # el NVIDIA Container Toolkit instalado en el host.
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+    command: ["python", "main.py"]

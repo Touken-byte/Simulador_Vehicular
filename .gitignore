@@ -1,0 +1,21 @@
+# Entornos virtuales
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
+
+# Datos descargados (pesados, no se versionan)
+data/*.graphml
+data/*.gpkg
+
+# Resultados generados
+output/*.png
+output/*.csv
+output/*.json
+!output/.gitkeep
+
+# Sistema operativo / editor
+.DS_Store
+.vscode/
+*.log
