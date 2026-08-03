@@ -20,7 +20,7 @@ zona:
 
 # --- Parámetros de simulación (RF12) ---
 simulacion:
-  num_vehiculos: 500
+  num_vehiculos: 2000
   duracion_ticks: 1000
   modo_ejecucion: "secuencial"   # secuencial | cpu_paralelo | gpu
   velocidad_reproduccion: 1       # 1x, 2x, 4x (RF10)
