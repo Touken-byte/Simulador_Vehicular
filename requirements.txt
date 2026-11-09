@@ -11,3 +11,4 @@ tqdm>=4.66.0
 
 # Sprint 3 en adelante (GPU) - requiere CUDA Toolkit instalado, descomentar cuando se implemente
 # pycuda>=2024.1
+pygame>=2.5.0
